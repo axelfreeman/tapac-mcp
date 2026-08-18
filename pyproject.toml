@@ -1,0 +1,22 @@
+[project]
+name = "tapac-mcp"
+version = "0.1.0"
+description = "TAPAC — find & verify B2B contacts via MCP. Real-time scraping + SMTP validation."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Axel Freeman" }]
+keywords = ["mcp", "b2b", "contacts", "lead-generation", "email", "sales", "scraping"]
+dependencies = [
+    "mcp>=1.0.0",
+]
+
+[project.scripts]
+tapac-mcp = "tapac_mcp.server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/tapac_mcp"]
