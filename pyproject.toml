@@ -8,7 +8,7 @@ license = { text = "MIT" }
 authors = [{ name = "Axel Freeman" }]
 keywords = ["mcp", "b2b", "contacts", "lead-generation", "email", "sales", "scraping"]
 dependencies = [
-    "mcp>=1.0.0",
+    "mcp>=1.2.0,<2.0.0",
 ]
 
 [project.scripts]
