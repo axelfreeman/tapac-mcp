@@ -39,7 +39,9 @@ Requires [`uv`](https://docs.astral.sh/uv/) (one-liner installer: `curl -LsSf ht
 
 ### 2. Wire into your agent
 
-**Claude Desktop** (`claude_desktop_config.json`):
+The same `command` + `args` work everywhere. Pick your agent:
+
+**Claude Desktop** — `claude_desktop_config.json`:
 ```json
 {
   "mcpServers": {
@@ -51,7 +53,33 @@ Requires [`uv`](https://docs.astral.sh/uv/) (one-liner installer: `curl -LsSf ht
 }
 ```
 
-**Cursor / Windsurf** — same `command` + `args`, add as an MCP server in settings.
+**Claude Code** (terminal):
+```bash
+claude mcp add tapac -- uvx --from git+https://github.com/axelfreeman/tapac-mcp tapac-mcp
+```
+
+**Codex (OpenAI)** — `~/.codex/config.toml`:
+```toml
+[mcp_servers.tapac]
+command = "uvx"
+args = ["--from", "git+https://github.com/axelfreeman/tapac-mcp", "tapac-mcp"]
+```
+
+**Cursor** — `.cursor/mcp.json`:
+```json
+{
+  "mcpServers": {
+    "tapac": {
+      "command": "uvx",
+      "args": ["--from", "git+https://github.com/axelfreeman/tapac-mcp", "tapac-mcp"]
+    }
+  }
+}
+```
+
+**Windsurf** — `~/.codeium/windsurf/mcp_config.json` (same JSON as Cursor).
+
+**DeepSeek** — the chat app doesn't register local MCP servers natively. Use DeepSeek through an MCP-capable client (Claude Code / Cursor with the DeepSeek API), or connect to the hosted endpoint `https://tapacapi.com/mcp/sse` (coming soon).
 
 ### 3. Get your free API key
 
