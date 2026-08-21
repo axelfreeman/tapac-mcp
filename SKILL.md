@@ -1,6 +1,6 @@
 ---
 name: tapac
-description: Find and verify B2B business contacts via the TAPAC MCP server. Use when the user asks for business contacts, B2B leads, an email finder, Apollo/ZoomInfo/Hunter alternatives, cold-outreach leads, or Telegram/Discord lead mining.
+description: Find and verify B2B business contacts in real time — scrape company websites, Discord and Telegram, then validate every email via SMTP (2–5% bounce vs 10–35% for static databases). Use when the user wants to find business emails or phone numbers, build a cold-outreach lead list, source prospects from a company website or a Discord/Telegram community, replace Apollo/ZoomInfo/Hunter, or verify an email address is real.
 ---
 
 # TAPAC

@@ -1,5 +1,7 @@
 # TAPAC — MCP Server for B2B Contact Finding
 
+[![skills.sh](https://skills.sh/b/axelfreeman/tapac-mcp)](https://skills.sh/axelfreeman/tapac-mcp)
+
 **Find & verify B2B contacts in real time.** Scrapes company websites, Discord, and Telegram — then validates every email via SMTP. Built as a native MCP server, so Claude, ChatGPT, Cursor, and any AI agent can call it directly.
 
 > **Install in one command:**
