@@ -125,6 +125,24 @@ Server version + API-key state.
 
 ---
 
+## Demo script (no MCP wiring needed)
+
+See the tool output shape instantly — run the tools directly without wiring the server:
+
+```bash
+uv run scripts/demo.py
+```
+
+It prints `tapac_status()` plus a sample `tapac_find_contacts()` call.
+
+## Skill (optional)
+
+`SKILL.md` documents the TAPAC tools for any agent that loads skills. Install it with a symlink so `git pull` keeps it fresh:
+
+```bash
+ln -s "$PWD" ~/.agents/skills/tapac
+```
+
 ## Links
 
 - **Website:** https://tapacapi.com
