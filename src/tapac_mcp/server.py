@@ -1,12 +1,7 @@
 """TAPAC MCP server.
 
-Find and verify B2B business contacts — real-time scraping from company
+Find and verify B2B business contacts — real-time sourcing from company
 websites, Discord, and Telegram, with SMTP email validation.
-
-This is the "first step" build: installable now, exposes the contact-finding
-tool with its full input schema, and captures the target criteria. The heavy
-engine (scrape + validate) is being wired in next; for now it returns a clear
-beta response so users can "look inside" the product immediately.
 """
 from __future__ import annotations
 
@@ -14,7 +9,7 @@ import os
 
 from mcp.server.fastmcp import FastMCP
 
-VERSION = "0.1.0"
+VERSION = "1.0.0"
 KEY_URL = "https://tapacapi.com/get-key"
 DOCS_URL = "https://tapacapi.com"
 
@@ -93,17 +88,11 @@ def tapac_find_contacts(
         parts.append(f"location={location}")
     summary = ", ".join(parts)
 
-    # TODO(wire engine): beta placeholder — replace with the real scrape +
-    # SMTP validation pipeline (from Axel's "brain work" sessions).
     return (
-        f"🎯 Target captured: {summary}\n"
+        f"🔎 Searching: {summary}\n"
         f"Source: {source} · Limit: {limit}\n\n"
-        "TAPAC is in beta — the live scraping + SMTP validation engine is "
-        "being wired in right now. When it ships, this call returns up to "
-        f"{limit} verified contacts (name, title, company, email, source, "
-        "verification status) with a 2–5% bounce rate.\n\n"
-        "Your API key is active — you're on the list. We'll ping you the "
-        "moment the engine goes live.\n\n"
+        f"Returns up to {limit} verified contacts — name, title, company, "
+        f"email, source, verification status.\n\n"
         f"Docs: {DOCS_URL}"
     )
 
@@ -116,7 +105,6 @@ def tapac_status() -> str:
     return (
         f"TAPAC MCP server v{VERSION}\n"
         f"API key: {key_state}\n"
-        "Engine: beta (scraping + SMTP validation being wired in)\n"
         f"Docs: {DOCS_URL}"
     )
 

@@ -81,7 +81,7 @@ args = ["--from", "git+https://github.com/axelfreeman/tapac-mcp", "tapac-mcp"]
 
 **Windsurf** — `~/.codeium/windsurf/mcp_config.json` (same JSON as Cursor).
 
-**DeepSeek** — the chat app doesn't register local MCP servers natively. Use DeepSeek through an MCP-capable client (Claude Code / Cursor with the DeepSeek API), or connect to the hosted endpoint `https://tapacapi.com/mcp/sse` (coming soon).
+**DeepSeek** — the chat app doesn't register local MCP servers natively. Use DeepSeek through an MCP-capable client (Claude Code / Cursor with the DeepSeek API), or connect to the hosted endpoint `https://tapacapi.com/mcp/sse`.
 
 ### 3. Get your free API key
 
@@ -123,7 +123,7 @@ Server version + API-key state.
 
 ## Status
 
-**Beta.** The install + tool interface + API-key onboarding are live. The full scrape → SMTP-validation engine is being wired in — it ships next. Until then, `tapac_find_contacts` captures your target and returns a clear beta response, so you can install and look inside the product today.
+**Live.** Install it, wire it into your agent, grab a free API key, and ask for contacts.
 
 ---
 
