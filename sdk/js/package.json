@@ -1,5 +1,5 @@
 {
-  "name": "@tapac/sdk",
+  "name": "@tapacapi/sdk",
   "version": "1.0.0",
   "description": "Official JavaScript/TypeScript SDK for TAPAC — find and verify B2B contacts programmatically.",
   "main": "index.js",
