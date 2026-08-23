@@ -1,0 +1,15 @@
+{
+  "name": "@tapac/sdk",
+  "version": "1.0.0",
+  "description": "Official JavaScript/TypeScript SDK for TAPAC — find and verify B2B contacts programmatically.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/axelfreeman/tapac-mcp"
+  },
+  "homepage": "https://tapacapi.com",
+  "keywords": ["tapac", "b2b", "contacts", "lead-generation", "email-verification", "mcp"],
+  "engines": { "node": ">=18" }
+}

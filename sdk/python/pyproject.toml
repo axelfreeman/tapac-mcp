@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "tapac-sdk"
+version = "1.0.0"
+description = "Official Python SDK for TAPAC — find and verify B2B contacts programmatically."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Axel Freeman" }]
+requires-python = ">=3.9"
+keywords = ["tapac", "b2b", "contacts", "lead-generation", "email-verification", "mcp"]
+dependencies = ["httpx>=0.24"]
+
+[project.urls]
+Homepage = "https://tapacapi.com"
+Repository = "https://github.com/axelfreeman/tapac-mcp"
+
+[tool.hatch.build.targets.wheel]
+packages = ["tapac_sdk"]

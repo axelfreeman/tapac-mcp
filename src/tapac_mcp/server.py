@@ -12,6 +12,8 @@ from mcp.server.fastmcp import FastMCP
 VERSION = "1.0.0"
 KEY_URL = "https://tapacapi.com/get-key"
 DOCS_URL = "https://tapacapi.com"
+MCP_HOST = os.environ.get("MCP_HOST", "127.0.0.1")
+MCP_PORT = int(os.environ.get("MCP_PORT", "8000"))
 
 mcp = FastMCP(
     "tapac",
@@ -21,6 +23,8 @@ mcp = FastMCP(
         "company_size, location, source), then call tapac_find_contacts. "
         "Never invent contacts — only return what the tool returns."
     ),
+    host=MCP_HOST,
+    port=MCP_PORT,
 )
 
 
@@ -110,8 +114,21 @@ def tapac_status() -> str:
 
 
 def main() -> None:
-    """Entry point for `uvx tapac-mcp` / `python -m tapac_mcp.server`."""
-    mcp.run()
+    """Entry point for `uvx tapac-mcp` / `python -m tapac_mcp.server`.
+
+    Transport is selected by environment variable:
+    - MCP_TRANSPORT=streamable-http runs a hosted HTTP endpoint at
+      MCP_HOST:MCP_PORT, streamable HTTP path /mcp.
+    - MCP_TRANSPORT=sse runs the (deprecated) SSE transport at /sse.
+    - default: stdio (for local `uvx` installs).
+    """
+    transport = os.environ.get("MCP_TRANSPORT", "stdio")
+    if transport == "streamable-http":
+        mcp.run(transport="streamable-http")
+    elif transport == "sse":
+        mcp.run(transport="sse")
+    else:
+        mcp.run()
 
 
 if __name__ == "__main__":
