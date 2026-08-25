@@ -1,4 +1,5 @@
 """End-to-end: install via uvx one-liner + full MCP handshake."""
+
 import asyncio
 
 from mcp import ClientSession, StdioServerParameters

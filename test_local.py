@@ -1,4 +1,5 @@
 """Local stdio test for the TAPAC MCP server."""
+
 import asyncio
 import sys
 

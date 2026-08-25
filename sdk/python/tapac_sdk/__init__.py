@@ -1,4 +1,5 @@
 """TAPAC SDK — official Python client for the TAPAC REST API."""
+
 from __future__ import annotations
 
 import httpx
@@ -7,7 +8,9 @@ DEFAULT_BASE = "https://tapacapi.com"
 
 
 class TapacClient:
-    def __init__(self, api_key: str | None = None, base_url: str = DEFAULT_BASE, sandbox: bool = False):
+    def __init__(
+        self, api_key: str | None = None, base_url: str = DEFAULT_BASE, sandbox: bool = False
+    ):
         self.api_key = api_key
         self.base_url = base_url.rstrip("/")
         self.sandbox = sandbox
@@ -28,15 +31,21 @@ class TapacClient:
     def status(self) -> dict:
         return self._request("GET", "/v1/status")
 
-    def find_contacts(self, industry="", job_titles=None, company_size="", location="", source="website", limit=10) -> dict:
-        return self._request("POST", "/v1/contacts/search", json={
-            "industry": industry,
-            "job_titles": job_titles or [],
-            "company_size": company_size,
-            "location": location,
-            "source": source,
-            "limit": limit,
-        })
+    def find_contacts(
+        self, industry="", job_titles=None, company_size="", location="", source="website", limit=10
+    ) -> dict:
+        return self._request(
+            "POST",
+            "/v1/contacts/search",
+            json={
+                "industry": industry,
+                "job_titles": job_titles or [],
+                "company_size": company_size,
+                "location": location,
+                "source": source,
+                "limit": limit,
+            },
+        )
 
     def verify_emails(self, emails: list[str]) -> dict:
         return self._request("POST", "/v1/contacts/verify", json={"emails": emails})

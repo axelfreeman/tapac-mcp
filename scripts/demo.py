@@ -3,6 +3,7 @@
 
 Run:  uv run scripts/demo.py   (installs deps from pyproject.toml)
 """
+
 from __future__ import annotations
 
 import os
@@ -10,7 +11,7 @@ import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
 
-from tapac_mcp.server import tapac_status, tapac_find_contacts  # noqa: E402
+from tapac_mcp.server import tapac_find_contacts, tapac_status
 
 bar = "=" * 62
 

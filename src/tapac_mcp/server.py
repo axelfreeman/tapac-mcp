@@ -3,6 +3,7 @@
 Find and verify B2B business contacts — real-time sourcing from company
 websites, Discord, and Telegram, with SMTP email validation.
 """
+
 from __future__ import annotations
 
 import os
@@ -42,7 +43,7 @@ def _onboarding() -> str:
         "export TAPAC_API_KEY=your_key_here\n"
         "```\n\n"
         "After that, ask me for contacts — for example:\n"
-        "\"Find 20 VP Sales at US SaaS companies with 50-500 employees\"\n\n"
+        '"Find 20 VP Sales at US SaaS companies with 50-500 employees"\n\n'
         f"Docs: {DOCS_URL}"
     )
 
@@ -77,7 +78,7 @@ def tapac_find_contacts(
         return (
             "I need a bit more to search. Tell me at least one of: industry, "
             "job_titles, or location.\n\n"
-            "Example: \"SaaS companies, VP Sales and CTO roles, US, 50-500 employees\""
+            'Example: "SaaS companies, VP Sales and CTO roles, US, 50-500 employees"'
         )
 
     titles = job_titles or []
@@ -106,11 +107,7 @@ def tapac_status() -> str:
     """Check TAPAC server status, version, and API-key state."""
     key = _api_key()
     key_state = "✓ active" if key else f"✗ not set (get one at {KEY_URL})"
-    return (
-        f"TAPAC MCP server v{VERSION}\n"
-        f"API key: {key_state}\n"
-        f"Docs: {DOCS_URL}"
-    )
+    return f"TAPAC MCP server v{VERSION}\nAPI key: {key_state}\nDocs: {DOCS_URL}"
 
 
 def main() -> None:

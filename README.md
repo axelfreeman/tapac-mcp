@@ -1,5 +1,11 @@
 # TAPAC — MCP Server for B2B Contact Finding
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue)](https://www.python.org/)
+[![MCP native](https://img.shields.io/badge/MCP-native-8A2BE2)](https://modelcontextprotocol.io)
+[![Lint](https://github.com/axelfreeman/tapac-mcp/actions/workflows/lint.yml/badge.svg)](https://github.com/axelfreeman/tapac-mcp/actions/workflows/lint.yml)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://pre-commit.com)
+
 [![skills.sh](https://skills.sh/b/axelfreeman/tapac-mcp)](https://skills.sh/axelfreeman/tapac-mcp)
 
 **Find & verify B2B contacts in real time.** Scrapes company websites, Discord, and Telegram — then validates every email via SMTP. Built as a native MCP server, so Claude, ChatGPT, Cursor, and any AI agent can call it directly.
