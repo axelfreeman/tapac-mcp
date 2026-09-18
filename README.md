@@ -5,6 +5,7 @@
 [![MCP native](https://img.shields.io/badge/MCP-native-8A2BE2)](https://modelcontextprotocol.io)
 [![Lint](https://github.com/axelfreeman/tapac-mcp/actions/workflows/lint.yml/badge.svg)](https://github.com/axelfreeman/tapac-mcp/actions/workflows/lint.yml)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://pre-commit.com)
+[![axelfreeman/tapac-mcp MCP server](https://glama.ai/mcp/servers/axelfreeman/tapac-mcp/badges/score.svg)](https://glama.ai/mcp/servers/axelfreeman/tapac-mcp)
 
 [![skills.sh](https://skills.sh/b/axelfreeman/tapac-mcp)](https://skills.sh/axelfreeman/tapac-mcp)
 
