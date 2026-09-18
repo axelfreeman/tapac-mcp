@@ -45,6 +45,26 @@ uvx --from git+https://github.com/axelfreeman/tapac-mcp tapac-mcp
 
 Requires [`uv`](https://docs.astral.sh/uv/) (one-liner installer: `curl -LsSf https://astral.sh/uv/install.sh | sh`).
 
+**Node instead of Python?** The same server ships on npm — no Python toolchain needed, Node 18+:
+
+```bash
+npx -y @tapacapi/mcp
+```
+
+```json
+{
+  "mcpServers": {
+    "tapac": {
+      "command": "npx",
+      "args": ["-y", "@tapacapi/mcp"],
+      "env": { "TAPAC_API_KEY": "your_key_here" }
+    }
+  }
+}
+```
+
+Package: [`@tapacapi/mcp`](https://www.npmjs.com/package/@tapacapi/mcp).
+
 ### 2. Wire into your agent
 
 The same `command` + `args` work everywhere. Pick your agent:

@@ -7,3 +7,7 @@ dist/
 build/
 .DS_Store
 uv.lock
+
+# npm build artifacts (the published package lives in npm/mcp)
+npm/**/node_modules/
+npm/**/package-lock.json

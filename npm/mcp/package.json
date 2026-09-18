@@ -1,0 +1,43 @@
+{
+  "name": "@tapacapi/mcp",
+  "version": "1.0.0",
+  "description": "TAPAC MCP server — find and verify B2B business contacts (real-time sourcing + SMTP email verification) from any MCP-compatible agent. Run with npx.",
+  "license": "MIT",
+  "type": "commonjs",
+  "bin": {
+    "tapac-mcp": "bin/tapac-mcp.js"
+  },
+  "main": "index.js",
+  "files": [
+    "bin",
+    "index.js",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axelfreeman/tapac-mcp.git"
+  },
+  "homepage": "https://tapacapi.com",
+  "bugs": {
+    "url": "https://github.com/axelfreeman/tapac-mcp/issues"
+  },
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "modelcontextprotocol",
+    "tapac",
+    "b2b",
+    "contacts",
+    "lead-generation",
+    "email-verification",
+    "cold-email",
+    "apollo-alternative"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.23.8"
+  }
+}
