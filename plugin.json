@@ -16,8 +16,21 @@
   "mcpServers": [
     {
       "name": "tapac",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@tapacapi/mcp"
+      ],
+      "transport": "stdio"
+    },
+    {
+      "name": "tapac-uvx",
       "command": "uvx",
-      "args": ["--from", "git+https://github.com/axelfreeman/tapac-mcp", "tapac-mcp"],
+      "args": [
+        "--from",
+        "git+https://github.com/axelfreeman/tapac-mcp",
+        "tapac-mcp"
+      ],
       "transport": "stdio"
     },
     {

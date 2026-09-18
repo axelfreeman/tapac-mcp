@@ -14,7 +14,7 @@ TAPAC finds and verifies B2B business contacts in real time — sourcing from pu
 
 ## Setup
 
-1. Install and wire the server into your agent — full per-agent instructions (Claude Desktop, Claude Code, Cursor, Codex, Windsurf) are in the README.
+1. Install and wire the server into your agent: `npx -y @tapacapi/mcp` (npm), `uvx --from git+https://github.com/axelfreeman/tapac-mcp tapac-mcp` (Python), or the hosted endpoint https://tapacapi.com/mcp. Full per-agent snippets (Claude Desktop, Claude Code, Cursor, Codex, Windsurf) are in the README.
 2. Get a free API key at https://tapacapi.com/get-key and set `TAPAC_API_KEY`.
 
 ## Workflows
