@@ -178,6 +178,15 @@ ln -s "$PWD" ~/.agents/skills/tapac
 - **Free toolkit (self-hosted):** https://github.com/axelfreeman/b2b-contact-mining-kit
 - **Author:** [Axel Freeman](https://axelfreeman.com)
 
+## Need this done for you?
+
+What's in this repo is the free half of the work: sourcing, verification, and the volume a test
+actually needs to be readable. If you'd rather have that run against your own market:
+
+- [Engagement, scope and public pricing](https://axelfreeman.com/marketing-engineer.html)
+- [What actually ships in a done-for-you engagement](https://axelfreeman.com/done-for-you-lead-generation.html)
+- [Proof — what is live right now](https://axelfreeman.com/proof.html)
+
 ## License
 
 MIT.
